@@ -1,0 +1,11 @@
+﻿{
+  "Id": "9uljIip5jEiItfYk-sY8Bw",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/9uljIip5jEiItfYk-sY8Bw",
+  "Name": "Edge: Lyft: A ride whenever you need one app",
+  "Type": "App",
+  "Created": "2021-12-28T22:12:47.4447927Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-28T22:12:47.4447927Z"
+}

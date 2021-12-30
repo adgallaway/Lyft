@@ -1,0 +1,13 @@
+﻿{
+  "Id": "jaaHRv0Hq0SVsq4gXt_r_A",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/jaaHRv0Hq0SVsq4gXt_r_A",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/e2ZbkQfoUU2XShVxPqmdhg",
+  "Name": "Next",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2021-12-28T22:24:51.8659777Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-28T22:24:51.8659777Z"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/routes/2021-08-30" ContentHash="hOymiEqgEECxdWpZV4fQ5A" DesignTimeRectangle="607, 834, 50, 49" ElementType="Text" FriendlyName="'138'" FullSelectorArgument="&lt;webctrl aaname=' 138 ' parentid='main-wrapper' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' * ' parentid='main-wrapper' tag='SPAN' type='' /&gt;" Guid="dcfd3601-efa4-4508-8330-ef3bbb016768" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="488, 908, 289, 36" ElementType="Text" FriendlyName="'Rides'" FullSelectorArgument="&lt;webctrl isleaf='1' parentid='main-wrapper' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' parentid='main-wrapper' tag='P' type='' aaname=' Rides ' check:text='Rides' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">1Ql3LQ7KiIk2M4tPIG48onA</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0Yi-N4UJG8UuoM9opAwxflA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="a550e9ca7f729857f94f86d99ba4ffdf.png" xmlns="">0xzutBIoAa0eyreZwhUVRfA</imageRef>
+</TargetAnchorable>

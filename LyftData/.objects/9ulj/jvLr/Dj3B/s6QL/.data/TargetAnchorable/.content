@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/routes/2021-12-13" ContentHash="XXHexEVL302JW6WdTFOoyg" DesignTimeRectangle="488, 546, 170, 34" ElementType="Text" FriendlyName="'Express Pay Fees'" FullSelectorArgument="&lt;webctrl aaname='Express Pay Fees' parentid='main-wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Express Pay Fees' parentid='main-wrapper' tag='DIV' type='' check:text='Express Pay Fees' /&gt;" Guid="98dea6ad-df9b-4c2b-bb9d-3cd2652a2ec1" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">00u0UnJKe2E2IGZEIyxlQ4A</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="efdc5803fb450578e1d5417987109511.png" xmlns="">0f5ogSfj-rU-gbADT5XGxUg</imageRef>
+</TargetAnchorable>

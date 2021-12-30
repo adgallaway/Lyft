@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/routes/2021-12-13" ContentHash="dXnawVAFP0Oqueu9jXnq1A" DesignTimeRectangle="436, 347, 1060, 60" FriendlyName="'Dec 13 - Dec 19, 2021'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' aaname='*' /&gt;" Guid="9a2e78ef-7c9c-4b42-8067-16b8937701e7" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0Zbgjq-JWyEKmbOjbOavCow</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="b97308fd4811c8901ee69ba6d163adc5.png" xmlns="">0MBhvcf4TZUqs56qE7Rvekg</imageRef>
+</TargetAnchorable>

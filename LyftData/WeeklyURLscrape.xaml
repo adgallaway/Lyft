@@ -1,0 +1,160 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WeeklyURLscrape" sap:VirtualizedContainerService.HintSize="897.333333333333,1262.66666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Weekly URL scrape" sap:VirtualizedContainerService.HintSize="624.666666666667,1198" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_WeeklyData" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="582.666666666667,1106" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="00d12abc-613a-4b0b-8474-b3d77c2b3609" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="548.666666666667,888" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="dt_WeeklyURL" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_WeeklyURL]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='WeekOf'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Url'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='TotalRides'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='a' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='a' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='a' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="506.666666666667,158.666666666667" sap2010:WorkflowViewState.IdRef="NExtractData_1" InteractionMode="Simulate" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="00d12abc-613a-4b0b-8474-b3d77c2b3609" Version="V1">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.lyft.com/drive/year" DesignTimeRectangle="438, 818, 64, 29" ElementType="Text" FriendlyName="'« 2020'" FullSelectorArgument="&lt;webctrl aaname='« 2020' parentid='main-wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='« *' parentid='main-wrapper' tag='A' type='' check:text='« *' /&gt;" Guid="640d77ab-3e83-4cb1-bf6a-e7cc2aa05fa0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAhCAYAAABgKg1bAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAReSURBVGhD7Zg9S1xLGMdvn2+xn+EW6WxvEUiRcjuLdJa3ECxsLC4IBpQUERQJooRlBRcSFDawgSsKGyQsYpBlUYhEPLNnjp59wW3+eebMzJ6ZOS9uwhJSnOJXnDnPzpn5P28z+9fDaISCmEIQh0IQh0IQh0IQh0IQh0IQh0IQh0IQh0IQh6kL0vvSAHu5itvSMm6fEDMbYNVz9FJsBUPvHP7SBm7/VvalFXhzFfhfGIYp9g+Da/C1LXgzpn0N/NswaRsxRFivwSuvSHu9ps0mwkHSfqqC3O+8kR98vgW2dgh/pwY291qOzR7i3rEftg/hCeFKq/AWa/DfN9Bd3oanxPHeXdmi8FMwIYQQYb6CbtW0XwU7Cqz5H0YBgiVyjvh+eZtEaICba/qngoCb9tMU5OsHuYn1C/Sdd/2jXbmAzY4x3kH3OY3N7IJ7tv3DiIFHG3kD/1KPheALwn4b/LtpK7iCP0vvSvQujMf7B9tyTW87GFj2Iwy0M5ZOrfVOTZBevQLvRQ1ByrtoM/P08XIcJcNIpBXyaujYKvgxmFjwq3M11oFPqcj2b2w7jXIIO9Jj1/DL9jdd7tZFpGzANxzy24pqsESLe7I7FuzuFeX0070MASXRb559wF3KuwSX5HERDTvX8tlryOdqhoAC9Rt2EDslU5D7A8q1dSo84pm34C/vwT/LKlyPcUPepc3NfpTziWcR4vPHifQyCd+JmmR7MIvh5z0ZISdq7KRCz6vofrXtbFpOFGYIMozCjyb7LJ4D8EXyZkpRnBQ5n+mtc3Sf0kL+a1l2CaK0MutIFrRGkZJGxPX2qXOJ335zbU1UWlEd0WMpgqhiR6qJCt//RIsq0cRt125SaPOiM8zsGaFP3cIM7ywmFCSMNk/zGfVFdrw4RdOZQJCo0OjF8yYYedLbcdrfxKi2lxD0ZwR5nRv249btdIufEmTheNyFLEGmnSpyUWnng2TupvJYhOhzScoaJ6s/uRFCAvxLL+f+l6dKobwoUvVfK6T67JEeXWohi83cyJPniKw6oM4edI5xD1cRKrryU53KwzOaw6hldsp8p1ZFnmMH0qMyfeg0Zxx2JiErjE34Ir1/pKXq1py0yUpFA+1Qo6Um0K15n43HEjUkKlDixBeprgosKZjXHi1ywthEej+vLbZkJ6L8dr+dnYomyvs5rT2simJs16iEINEZYS6eSNcVdpKj9JhHwtgkJOHEhjOEk5teUfUsJj8VbXKF04572VBnI0mKIMQvpY6+SNHFa/MYvN5MoYV7866hNndb3oVfv0DoMYRnTfgL6vLlpNw4FV/QbTh1fuIsDv/4jkOXx7UGgjZDz7tCUKXbb3RJTKZcuiBEv30K/qmjru03uKOPBZfZBbb3fktuIpdkx+id0OL01V8jNrDZcv4yuJDnGdMuDaNjRAzoDjSvBDYhJ/B2cj+ZgvxuBlx4TxAkbqbTIVTzEzmR/scI8qdQCOJQCOJQCOJQCOJQCGIxwg/RwhmhIWimpAAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.lyft.com/drive/year" DesignTimeRectangle="462, 349, 1008, 1260" FriendlyName="'Dec 13'" FullSelectorArgument="&lt;webctrl tag='OL' /&gt;" Guid="d9959ad7-2e8e-4e37-afdd-e5ced7fd1a6d" InformativeScreenshot="70b76354a241e6165a029ca371b03fbd.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_WeeklyURL]" DisplayName="For Each Row in Data Table dt_WeeklyURL" sap:VirtualizedContainerService.HintSize="506.666666666667,594.666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body dt_WeeklyURL" sap:VirtualizedContainerService.HintSize="472.666666666667,471.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="weeklyURL" />
+                      <Variable x:TypeArguments="x:String" Name="weekOf" />
+                      <Variable x:TypeArguments="x:Int32" Name="totalRides" />
+                      <Variable x:TypeArguments="x:String" Name="weekEarnings" />
+                      <Variable x:TypeArguments="x:String" Name="wk_BookTime" />
+                      <Variable x:TypeArguments="x:String" Name="wk_OnlineTime" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.666666666667,99.3333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[weeklyURL]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[CurrentRow("URL").ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="430.666666666667,83.3333333333333" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[weeklyURL]" Version="V1" />
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="430.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WeeklyEarnings.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKSSURBVDhPbVFLTxNRFL5FY30kyKNQg4kro4kxcWHizp0LE3eu/QPuTFyhogkidWCmIoUEH0gwGGOCicaNoYSHCA0psbSIBiGWBMOrpaWdzoyU3vk89850QeQm33zn3HO+7547l6VYu5fQQbAIINgu74dyTfQKjVcYhFIe2qxQueT/RQ4qVKQOaHB7uLsfEgZ6iinYZK3k3rZXVAaJqU5oIQNF5OVJdDJQeNrXhcyFfqSrOp0TxGkCBwmUb3oCyF58jdzVQaRrnpJRwKnTJGyDNcNo/AKx8jc+YYM1kVBM9JiEj2Sz1TMr62Lx1QId9sqZpkKDY3B3Qhb1m2FkLw0gc74PmbO92L78Frlr72WttJTFzsclGRfHV5xp6cqOwb2vsmB2zEj+O/ADVndMxtbzuGQz9A3p+i7YhaLMC7dHadpmsFX66E3OBEYwKtnsS8B44sa9CcC2nfhlAnxFp3vY2LryDmv0Y1mSDLbvu1coiz4swngzL2ODzMTi+R3kqI+nTZRW8vjj68QyvQhbYA+x1Tgum3Q6jWcsGYtlFzkK/XMyztwZxwJ7ADOcdHIyE1o2T3986dwL7JKrGV5Gpn0a1vQqSmsF2DRq7lkMxnASi6d78J2e89epbhQ+/8bGrWHM0Uuw+HENs4cVJGqDmKsJIq1EsJvchr3LUaJpfp7pQczTitljbYhXU+8RRebxSlWCRatVHq3VIBDxtGC9PQLbKMKMrWPx+iCmDwUwUxeU9WiVKnnGR3E1xaRlkz5Vn/KpmKpTbQImq9oQ8QcxWalg4mgAU/UaZH0vbMFCy8b8WmjUr4GYEzB2QsNovSp5rCEo9vcDdzUhNuLXvOEGrWOoQbMIINhDJyXvB9tlS2hG/Jr3H6OKz1IprVcmAAAAAElFTkSuQmCC" InformativeScreenshot="e02b92cfa3cba2a265ca7927c72a45ea.png" Selector="&lt;html app='msedge.exe' title='Driving History - Lyft'/&gt;" Url="https://www.lyft.com/drive/year" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

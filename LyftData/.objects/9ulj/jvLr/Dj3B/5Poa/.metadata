@@ -1,0 +1,13 @@
+﻿{
+  "Id": "5PoaYr5aqU6X7siwpuX81g",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/5PoaYr5aqU6X7siwpuX81g",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/Dj3BrwYPs0GCg7ylIEb2ag",
+  "Name": "Total Express Pay Fees",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2021-12-30T19:41:13.4864283Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-30T19:41:13.4864283Z"
+}

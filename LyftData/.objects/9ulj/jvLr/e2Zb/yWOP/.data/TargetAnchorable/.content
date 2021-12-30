@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/driver" ContentHash="Qznyy80wMkOHDPEBJ7027A" DesignTimeRectangle="201, 575, 480, 84" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='tel' aaname='' /&gt;" Guid="d45c4ad0-dc91-44e3-86a7-a7a936bc5d84" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Become a Lyft Driver and start earning with Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0ygv4WMpNI0WJxLflmIdDew</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="7309bd3c004e0354ff5404d27b71f5e3.png" xmlns="">0uo0czQiZvUKPvmqOIEYOfA</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,12 @@
+﻿{
+  "Id": "_YTVe8eL-EWS57OGljcp-Q",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/_YTVe8eL-EWS57OGljcp-Q",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/jvLrfjknOU-xoHeP8xGBtg",
+  "Name": "Edge: Driving History - Lyft",
+  "Type": "Screen",
+  "Created": "2021-12-29T18:32:47.9528034Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-29T18:32:47.9528034Z"
+}

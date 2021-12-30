@@ -1,0 +1,13 @@
+﻿{
+  "Id": "yOu98f7e5UCM9687P1nrbQ",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/yOu98f7e5UCM9687P1nrbQ",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/_YTVe8eL-EWS57OGljcp-Q",
+  "Name": "$573.19",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2021-12-29T20:18:11.5031591Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-29T20:18:11.5031591Z"
+}

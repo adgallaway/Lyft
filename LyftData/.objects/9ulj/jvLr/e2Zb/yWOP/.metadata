@@ -1,0 +1,13 @@
+﻿{
+  "Id": "yWOPVmtjpUa9sBz3Sa24jw",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/yWOPVmtjpUa9sBz3Sa24jw",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/e2ZbkQfoUU2XShVxPqmdhg",
+  "Name": "Enter Phone Number",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2021-12-28T22:17:18.702342Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-28T22:17:18.702342Z"
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/" ContentHash="1vCBtlSKL064ZFKj-MW0fw" DesignTimeRectangle="1515, 164, 78, 27" ElementType="Text" FriendlyName="'LOG IN'" FullSelectorArgument="&lt;webctrl aaname='LOG IN' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='LOG IN' parentid='__next' tag='SPAN' type='' check:text='LOG IN' /&gt;" Guid="e0639a70-88a1-44dd-bba3-4028cf16047f" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Lyft: A ride whenever you need one' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0fNMjzI4SlEKSQdnpWFbV1g</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="bc2a0c046db201b9a1ab89a9b42a4bc8.png" xmlns="">0sukd57uodUuP5xlL_b9Uxg</imageRef>
+</TargetAnchorable>

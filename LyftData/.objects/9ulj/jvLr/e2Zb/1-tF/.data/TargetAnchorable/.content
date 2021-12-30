@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/dashboard" ContentHash="mrXH-xRD50eZJeb4TNbYxQ" DesignTimeRectangle="59, 386, 120, 25" ElementType="Text" FriendlyName="'Driving History'" FullSelectorArgument="&lt;webctrl aaname=' Driving History ' parentid='main-wrapper' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Driving History ' parentid='main-wrapper' tag='SPAN' type='' check:text='Driving History' /&gt;" Guid="2f83d68b-629f-48ea-a1f9-71d5abb43d38" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driver Dashboard - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0RW4P0BzqvEe2ijGjuslasw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="dcbd2f87a39d040d9199acc94bf091f6.png" xmlns="">08BQdUb7eCUyPuyAIIbyCAQ</imageRef>
+</TargetAnchorable>

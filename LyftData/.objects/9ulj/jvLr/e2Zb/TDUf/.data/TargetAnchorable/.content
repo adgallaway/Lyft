@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://account.lyft.com/auth/verify" ContentHash="sfrbPizKTkeho9WNFfVGzQ" DesignTimeRectangle="689, 474, 564, 84" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='' aaname='' /&gt;" Guid="9d876c8d-9079-4067-8c40-a021849764be" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Verify phone number' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="689, 387, 539, 60" ElementType="Text" FriendlyName="'Verify your'" FullSelectorArgument="&lt;webctrl isleaf='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' tag='SPAN' type='' aaname='Verify your account by typing in the 6 digit code we sent via text.' check:text='Verify your account by typing in the 6 digit code we sent via text.' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">1oks8nTJtF0SchM5bztO0ug</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0hzeM_xE-i0KOP8MDJcv8WA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="1da6125dc0134ab812c8137eecb2854c.png" xmlns="">0YIYRhMhM80CdOi4g134a3Q</imageRef>
+</TargetAnchorable>

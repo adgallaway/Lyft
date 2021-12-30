@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/routes/2021-12-13" ContentHash="FyYDPkiVy0aIRXoH4v7DmA" DesignTimeRectangle="1145, 546, 299, 58" ElementType="Text" FriendlyName="'-$0.50'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='6' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' aaname=' -$*    ' /&gt;" Guid="26651ba8-ff17-4ada-9d16-73eb87168d6c" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">01rg4sj1FaE2Ou_8ySAUyJQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="5fc6938d1802710bf1b6cdf8a30d70fd.png" xmlns="">0wyDE71p5-EqOg5NiVPweVw</imageRef>
+</TargetAnchorable>

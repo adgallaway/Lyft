@@ -1,0 +1,13 @@
+﻿{
+  "Id": "s6QL-hhrIEOMt0ysUpD5Gg",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/s6QL-hhrIEOMt0ysUpD5Gg",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/Dj3BrwYPs0GCg7ylIEb2ag",
+  "Name": "Express Pay Fees",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2021-12-30T19:41:13.4208646Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-30T19:41:13.4208646Z"
+}

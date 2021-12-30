@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="whEk5BPGBEKu4OqnqrMjBg" Selector="&lt;html app='msedge.exe' title='Lyft: A ride whenever you need one' /&gt;" Url="https://www.lyft.com/" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0HO4A9wyzAU-tCEAut4h2GA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="dac313ac743de8e4b6d08a6637253274.png" xmlns="">0duWubH50pE-GIzQWIaycww</imageRef>
+</TargetApp>

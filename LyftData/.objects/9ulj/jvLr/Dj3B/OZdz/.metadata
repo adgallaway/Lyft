@@ -1,0 +1,13 @@
+﻿{
+  "Id": "OZdzF2SRPUGrXwfbIdj4YQ",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/OZdzF2SRPUGrXwfbIdj4YQ",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/Dj3BrwYPs0GCg7ylIEb2ag",
+  "Name": "Booked Time",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2021-12-30T16:47:42.3664496Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-30T16:47:42.3664496Z"
+}

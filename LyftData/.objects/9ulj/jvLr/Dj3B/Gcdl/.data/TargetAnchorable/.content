@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/routes/2021-08-30" ContentHash="LRvPa9Fb70CkiIeP6rqw0w" DesignTimeRectangle="438, 349, 1056, 56" FriendlyName="'Aug 30 - Sep 05, 2021'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' aaname='*' /&gt;" Guid="d698ce8d-4f54-4cc9-8cb6-a7daef687ea3" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="438, 430, 1056, 34" ElementType="Text" FriendlyName="'Aaron Gallaway'" FullSelectorArgument="&lt;webctrl aaname='Aaron Gallaway' parentid='main-wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Aaron Gallaway' parentid='main-wrapper' tag='DIV' type='' check:text='Aaron Gallaway' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">1TTykb2-LC06sT6YuS6W0gw</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0cE0Xh6VWIUSmEPc4MKYpkQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="a2271be70773c94a4b6346f3d083fad4.png" xmlns="">0gYiXy0PixkiMeQiz6zx2_Q</imageRef>
+</TargetAnchorable>

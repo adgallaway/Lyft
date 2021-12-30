@@ -1,0 +1,13 @@
+﻿{
+  "Id": "GcdlpII5Z0uASeiSCo5lRA",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/GcdlpII5Z0uASeiSCo5lRA",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/Dj3BrwYPs0GCg7ylIEb2ag",
+  "Name": "Week Of",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2021-12-30T16:47:42.0742866Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-30T16:47:42.0742866Z"
+}

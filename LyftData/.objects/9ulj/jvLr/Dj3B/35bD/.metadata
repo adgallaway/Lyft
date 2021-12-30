@@ -1,0 +1,13 @@
+﻿{
+  "Id": "35bDp5JYEkqo7I897yR5ng",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/35bDp5JYEkqo7I897yR5ng",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/Dj3BrwYPs0GCg7ylIEb2ag",
+  "Name": "Rides",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2021-12-30T16:47:42.2766809Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-30T16:47:42.2766809Z"
+}

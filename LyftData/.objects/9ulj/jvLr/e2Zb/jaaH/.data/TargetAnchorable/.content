@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://account.lyft.com/auth" ContentHash="rhUUh9pqYUGC4lX_ZXlRpw" DesignTimeRectangle="946, 682, 50, 27" ElementType="Text" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl aaname='Next' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Next' parentid='__next' tag='SPAN' type='' check:text='Next' /&gt;" Guid="78750b06-c5b5-4851-af66-e1a909899a7f" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0Jy_hGZI3fECzTBzfadmxYg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="e2b19ec1a444d1ef0033cf652f6f6391.png" xmlns="">00i7wyoBLskeWO3pA1eoJMw</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,13 @@
+﻿{
+  "Id": "1-tF05XQrECTxSAUX4EA4A",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/1-tF05XQrECTxSAUX4EA4A",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/e2ZbkQfoUU2XShVxPqmdhg",
+  "Name": "Driving History",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2021-12-28T22:29:42.7583862Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-28T22:29:42.7583862Z"
+}

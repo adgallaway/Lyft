@@ -1,0 +1,15 @@
+﻿{
+  "Id": "Dj3BrwYPs0GCg7ylIEb2ag",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/Dj3BrwYPs0GCg7ylIEb2ag",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/jvLrfjknOU-xoHeP8xGBtg",
+  "Name": "Edge: Lyft - Weekly Earnings",
+  "Type": "Screen",
+  "Created": "2021-12-30T16:42:08.8484554Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-30T16:42:57.0573506Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

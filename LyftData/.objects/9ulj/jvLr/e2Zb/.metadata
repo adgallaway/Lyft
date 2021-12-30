@@ -1,0 +1,12 @@
+﻿{
+  "Id": "e2ZbkQfoUU2XShVxPqmdhg",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/e2ZbkQfoUU2XShVxPqmdhg",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/jvLrfjknOU-xoHeP8xGBtg",
+  "Name": "Edge: Lyft: A ride whenever you need one",
+  "Type": "Screen",
+  "Created": "2021-12-28T22:12:47.5096879Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-28T22:12:47.5096879Z"
+}
