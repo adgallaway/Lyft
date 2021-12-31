@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DailyData" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="897.333333333333,2268.66666666667" sap2010:WorkflowViewState.IdRef="DailyData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DailyData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="arg_WeekOf" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>897.333333333333,2964</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>DailyData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="41">
       <x:String>System.Activities</x:String>
@@ -76,7 +84,7 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DailyData" sap:VirtualizedContainerService.HintSize="703.333333333333,2204" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DailyData" sap:VirtualizedContainerService.HintSize="703.333333333333,2899.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_DayOfWeek" />
       <Variable x:TypeArguments="x:String" Name="str_Month" />
@@ -88,16 +96,17 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Lyft - Daily" sap:VirtualizedContainerService.HintSize="661.333333333333,2112" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3db9e9e6-705e-4521-8ca3-ec1a91bf3ea6" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Lyft - Daily" sap:VirtualizedContainerService.HintSize="661.333333333333,2807.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3db9e9e6-705e-4521-8ca3-ec1a91bf3ea6" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="627.333333333333,1894" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Get Daily Data" sap:VirtualizedContainerService.HintSize="627.333333333333,2589.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="bonusExists" />
               <Variable x:TypeArguments="s:String[]" Name="arrayDay" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dt_RideURLs" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -197,6 +206,7 @@
                             <Variable x:TypeArguments="x:String" Name="bonusTime" />
                             <Variable x:TypeArguments="x:String" Name="bonusType" />
                             <Variable x:TypeArguments="x:Int32" Name="bonusAmt" />
+                            <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
                           </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -242,7 +252,7 @@
                             </ui:MultipleAssign.AssignOperations>
                           </ui:MultipleAssign>
                           <ui:BuildDataTable DataTable="{x:Null}" DisplayName="Build Data Table for Bonus" sap:VirtualizedContainerService.HintSize="430.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Week_x0020_Of&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Year&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Day_x0020_Of_x0020_Week&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Time&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Amount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-                          <ui:AddDataRow ArrayRow="{x:Null}" DataRow="{x:Null}" DataTable="[dt_Bonus]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="430.666666666667,190" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{arg_WeekOf, bonusType, str_Year, str_Date, str_DayOfWeek, bonusTime, bonusAmt}]" DataTable="[dt_Bonus]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="430.666666666667,190" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                         </Sequence>
                       </ActivityAction>
                     </ui:ForEachRow.Body>
@@ -259,6 +269,42 @@
                 </Sequence>
               </If.Else>
             </If>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_RideURLs]" DisplayName="Get Ride URLs" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='RideURL'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='a' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="585.333333333333,158.666666666667" sap2010:WorkflowViewState.IdRef="NExtractData_2" MaximumResults="0" ScopeIdentifier="3db9e9e6-705e-4521-8ca3-ec1a91bf3ea6" Version="V1">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="462, 290, 1008, 3766" FriendlyName="'12:46 AM'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;lyft-driver-day&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;ol' tag='OL' /&gt;" Guid="842e4dc5-7930-4674-b9a0-6aee74c9cae1" InformativeScreenshot="d51f7532408332ddc967d729c07ac0d9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_RideURLs]" DisplayName="For Each Row in dt_RideURLs" sap:VirtualizedContainerService.HintSize="585.333333333333,455.333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,332" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="weekOf">
+                        <Variable.Default>
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="arg_WeekOf" />
+                        </Variable.Default>
+                      </Variable>
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NGoToUrl DisplayName="Go To URL Ride Data" sap:VirtualizedContainerService.HintSize="334,83.3333333333333" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[CurrentRow(1).ToString]" Version="V1" />
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="RideData.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="arg_WeekOf">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="weekOf" />
+                        </InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

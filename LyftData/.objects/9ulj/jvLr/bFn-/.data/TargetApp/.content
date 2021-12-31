@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="94vi3A3RoUuk51TC_GWqkQ" Selector="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" Url="https://www.lyft.com/drive/detail/route/613695737336ea00101631c8" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0C4IwBQDzbk6Ckszuotpv_A</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="b957db636c85dd38119edd1d35f67463.png" xmlns="">0_Z8dhCZhgkaOS17a6RBCkw</imageRef>
+</TargetApp>

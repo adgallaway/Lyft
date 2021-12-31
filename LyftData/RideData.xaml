@@ -1,0 +1,99 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="RideData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="arg_WeekOf" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>897.333333333333,466</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>RideData_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="RideData" sap:VirtualizedContainerService.HintSize="476,396" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Route Detail - Lyft" sap:VirtualizedContainerService.HintSize="434,304" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3a3c545f-2573-48e3-ac34-f7cf949efdd1" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,86" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="94vi3A3RoUuk51TC_GWqkQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKSSURBVDhPbVFLTxNRFL5FY30kyKNQg4kro4kxcWHizp0LE3eu/QPuTFyhogkidWCmIoUEH0gwGGOCicaNoYSHCA0psbSIBiGWBMOrpaWdzoyU3vk89850QeQm33zn3HO+7547l6VYu5fQQbAIINgu74dyTfQKjVcYhFIe2qxQueT/RQ4qVKQOaHB7uLsfEgZ6iinYZK3k3rZXVAaJqU5oIQNF5OVJdDJQeNrXhcyFfqSrOp0TxGkCBwmUb3oCyF58jdzVQaRrnpJRwKnTJGyDNcNo/AKx8jc+YYM1kVBM9JiEj2Sz1TMr62Lx1QId9sqZpkKDY3B3Qhb1m2FkLw0gc74PmbO92L78Frlr72WttJTFzsclGRfHV5xp6cqOwb2vsmB2zEj+O/ADVndMxtbzuGQz9A3p+i7YhaLMC7dHadpmsFX66E3OBEYwKtnsS8B44sa9CcC2nfhlAnxFp3vY2LryDmv0Y1mSDLbvu1coiz4swngzL2ODzMTi+R3kqI+nTZRW8vjj68QyvQhbYA+x1Tgum3Q6jWcsGYtlFzkK/XMyztwZxwJ7ADOcdHIyE1o2T3986dwL7JKrGV5Gpn0a1vQqSmsF2DRq7lkMxnASi6d78J2e89epbhQ+/8bGrWHM0Uuw+HENs4cVJGqDmKsJIq1EsJvchr3LUaJpfp7pQczTitljbYhXU+8RRebxSlWCRatVHq3VIBDxtGC9PQLbKMKMrWPx+iCmDwUwUxeU9WiVKnnGR3E1xaRlkz5Vn/KpmKpTbQImq9oQ8QcxWalg4mgAU/UaZH0vbMFCy8b8WmjUr4GYEzB2QsNovSp5rCEo9vcDdzUhNuLXvOEGrWOoQbMIINhDJyXvB9tlS2hG/Jr3H6OKz1IprVcmAAAAAElFTkSuQmCC" InformativeScreenshot="b957db636c85dd38119edd1d35f67463.png" Reference="X4tath9j9kWzSCg9KCZkzw/bFn-OVK46k6ZX6vymbBoqw" Selector="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" Url="https://www.lyft.com/drive/detail/route/613695737336ea00101631c8" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

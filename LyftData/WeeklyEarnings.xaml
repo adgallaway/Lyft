@@ -547,7 +547,9 @@
                       <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="430.666666666667,82.6666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[str_DailyURL]" Version="V1" />
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="430.666666666667,113.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="DailyData.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_WeekOf">
+                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="weekOf" />
+                          </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
