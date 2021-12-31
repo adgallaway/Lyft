@@ -7,7 +7,9 @@ Readme.md
     [X] Allow user to supply verification code sent by SMS
     [X] Get weekly data
     [X] Get weekly payout
-    [] Get daily pay break down
+    [X] Get daily pay break down
+    [] Get ride data
     [] All data should be placed in SQL database
     [] All SQL datatables should be normalized
+    
 
