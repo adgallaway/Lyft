@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/day/2021-09-06" ContentHash="zwi47EZgkkGgvQOimB9ezg" DesignTimeRectangle="438, 326, 1056, 93" FriendlyName="'Bonus history'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;lyft-driver-day&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;h2' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='H2' aaname='Bonus history' check:text='Bonus history' /&gt;" Guid="b28636d0-ca23-4be6-9159-63778ce2fb51" Reference="X4tath9j9kWzSCg9KCZkzw/YkrzW4fTnkS7uOGB_Ije6g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">05Usv-TTHBUKq0wBNhZWWDQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="498760219f92e41ce5bde807290f1e9a.png" xmlns="">0gtY-eFsaIE-fYMO_qd4vUQ</imageRef>
+</TargetAnchorable>

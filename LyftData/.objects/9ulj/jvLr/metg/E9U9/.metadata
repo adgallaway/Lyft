@@ -1,0 +1,16 @@
+﻿{
+  "Id": "E9U9BVitEEqANfcUQbAgow",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/E9U9BVitEEqANfcUQbAgow",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/metgUad8U0KPOqWubBiE2Q",
+  "Name": "Day",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2021-12-31T21:11:11.5730991Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-31T21:34:58.8006336Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

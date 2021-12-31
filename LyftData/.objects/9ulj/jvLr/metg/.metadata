@@ -1,0 +1,15 @@
+﻿{
+  "Id": "metgUad8U0KPOqWubBiE2Q",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/metgUad8U0KPOqWubBiE2Q",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/jvLrfjknOU-xoHeP8xGBtg",
+  "Name": "Edge: Lyft - Daily",
+  "Type": "Screen",
+  "Created": "2021-12-31T21:08:01.8131535Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-31T21:11:11.4834069Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

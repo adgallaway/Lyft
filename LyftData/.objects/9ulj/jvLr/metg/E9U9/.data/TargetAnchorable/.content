@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/day/2021-09-12" ContentHash="co-MY7qZcEGXHAr3sxCYNw" DesignTimeRectangle="438, 349, 1056, 56" FriendlyName="'Sun, Sep 12, 2021'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' aaname='*' /&gt;" Guid="565f9f95-b037-4576-932e-537bd1cf8cca" Reference="X4tath9j9kWzSCg9KCZkzw/E9U9BVitEEqANfcUQbAgow" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="1">
+      <Target DesignTimeRectangle="899, 506, 133, 30" ElementType="Text" FriendlyName="'Net earnings'" FullSelectorArgument="&lt;webctrl aaname=' Net earnings ' parentid='main-wrapper' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Net earnings ' parentid='main-wrapper' tag='SPAN' type='' check:text='Net earnings' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">1obzaTaCyKUmAHFmqawUMQA</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0jhK3W8-qTkuHZNW_aY9xSQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="e7f466d7abf3081c7454b0c155348b4d.png" xmlns="">0brpqz5kRa0aQw2Kr8r3kLQ</imageRef>
+</TargetAnchorable>

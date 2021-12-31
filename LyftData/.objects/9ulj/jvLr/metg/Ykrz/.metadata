@@ -1,0 +1,16 @@
+﻿{
+  "Id": "YkrzW4fTnkS7uOGB_Ije6g",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/YkrzW4fTnkS7uOGB_Ije6g",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/metgUad8U0KPOqWubBiE2Q",
+  "Name": "Bonus history",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2021-12-31T21:13:38.3219933Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-12-31T21:34:58.7321344Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
