@@ -1,0 +1,13 @@
+﻿{
+  "Id": "etGVTYJIlES3PX_Ku6q4ag",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/etGVTYJIlES3PX_Ku6q4ag",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/bFn-OVK46k6ZX6vymbBoqw",
+  "Name": "View earnings breakdown",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2022-01-03T17:16:30.048137Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-01-03T17:16:30.048137Z"
+}

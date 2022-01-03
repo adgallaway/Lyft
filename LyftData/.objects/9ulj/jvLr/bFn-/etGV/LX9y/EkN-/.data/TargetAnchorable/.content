@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/6135988a82c32f000fc1f5af/breakdown" ContentHash="mdtNOWRcmUGDYV8FJFEzxg" DesignTimeRectangle="397, 662, 650, 20" ElementType="Text" FriendlyName="'Requested at 12:23 AM'" FullSelectorArgument="&lt;webctrl aaname=' Requested at 12:23 AM ' parentid='main-wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Requested at * ' parentid='main-wrapper' tag='DIV' type='' check:text='Requested at *' /&gt;" Guid="c2902308-57d3-4302-bacf-4607d7fa9cb9" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0_83byK0ceUm2ooDIEk6VeA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="00b886b01a783bdcf8f0439605fa293d.png" xmlns="">0PWxF1dlNiE25ysX7RcmEPg</imageRef>
+</TargetAnchorable>

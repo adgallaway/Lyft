@@ -1,0 +1,13 @@
+﻿{
+  "Id": "7gUn_s-7JE6HhimKh01jsQ",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/7gUn_s-7JE6HhimKh01jsQ",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/LX9y1B70W0SexIsTuztwQw",
+  "Name": "Drop-off Time",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2022-01-03T17:16:30.2282558Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-01-03T17:16:30.2282558Z"
+}

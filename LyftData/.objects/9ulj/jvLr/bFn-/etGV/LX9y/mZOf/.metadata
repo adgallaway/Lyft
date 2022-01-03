@@ -1,0 +1,13 @@
+﻿{
+  "Id": "mZOf6oOtd0us7FMwniDtuA",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/mZOf6oOtd0us7FMwniDtuA",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/LX9y1B70W0SexIsTuztwQw",
+  "Name": "Pickup Time",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Created": "2022-01-03T17:16:30.1248053Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-01-03T17:16:30.1248053Z"
+}

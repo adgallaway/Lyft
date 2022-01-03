@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/6135988a82c32f000fc1f5af/breakdown" ContentHash="Xt6SCLNfZ0mgl_uHtLIRAw" DesignTimeRectangle="397, 643, 100, 17" FriendlyName="'12:42 AM Pickup'" FullSelectorArgument="&lt;webctrl tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='STRONG' type='' aaname=' * Pickup ' check:text='* Pickup' /&gt;" Guid="265ee0a6-7488-4095-8b5e-53a51ec137db" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">015EAYg6RLUWUD_cih_Y5Wg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="f4ca4b654cf9f54edd89229b53670231.png" xmlns="">0QSG8bEMaR0aVWpzGH5aHSw</imageRef>
+</TargetAnchorable>

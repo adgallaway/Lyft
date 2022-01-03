@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/6135988a82c32f000fc1f5af/breakdown" ContentHash="t_611G609EK4GiN8XYz1PQ" DesignTimeRectangle="572, 802, 280, 31" ElementType="Text" FriendlyName="'Ride Receipt'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;lyft-route-detail&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div' idx='3' isleaf='1' parentid='main-wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' aaname=' Ride Receipt #: * ' isleaf='1' parentid='main-wrapper' tag='DIV' check:text='Ride Receipt #: *' /&gt;" Guid="8fe041e0-d72a-419c-b39a-fccce58566ba" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TargetAnchorable.Anchors>
+    <scg:List x:TypeArguments="ITarget" Capacity="4">
+      <Target DesignTimeRectangle="672, 842, 80, 19" ElementType="Text" FriendlyName="'Help Center'" FullSelectorArgument="&lt;webctrl aaname='Help Center' parentid='main-wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Help Center' parentid='main-wrapper' tag='A' type='' check:text='Help Center' /&gt;" SearchSteps="FuzzySelector, Image">
+        <imageRef attrName="ImageBase64" xmlns="">1yhJdKzcHV0KukNFGJtBbdQ</imageRef>
+      </Target>
+    </scg:List>
+  </TargetAnchorable.Anchors>
+  <imageRef attrName="ImageBase64" xmlns="">0IO__y8coX0WJi3r2NCoUpw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="515d17b974ab3889e6f9b4990d5fb243.png" xmlns="">0fXv3CePxLkSzOrljXsdMPw</imageRef>
+</TargetAnchorable>

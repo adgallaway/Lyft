@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/6135988a82c32f000fc1f5af" ContentHash="ozdVBjQRpESlJk1d_OKkYA" DesignTimeRectangle="376, 642, 152, 16" ElementType="Text" FriendlyName="'View earnings breakdown'" FullSelectorArgument="&lt;webctrl aaname=' View earnings breakdown ' parentid='main-wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' View earnings breakdown ' parentid='main-wrapper' tag='A' type='' check:text='View earnings breakdown' /&gt;" Guid="7eca8fea-d949-4616-b9fd-07d995ce078a" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">08PmbCIuvgk6gGJxBMMCLVg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="d9c8183f56e5eb36ff76d8675e85cebc.png" xmlns="">07GS0KGiE30WkqSuEDlGpsA</imageRef>
+</TargetAnchorable>
