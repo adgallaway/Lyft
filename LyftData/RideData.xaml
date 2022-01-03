@@ -1,14 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="RideData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="RideData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="arg_WeekOf" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,1642</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,2352</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RideData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="36">
+    <scg:List x:TypeArguments="x:String" Capacity="72">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -45,6 +45,7 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -77,32 +78,39 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RideData" sap:VirtualizedContainerService.HintSize="476,1577" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RideData" sap:VirtualizedContainerService.HintSize="691,2287" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Route Detail - Lyft" sap:VirtualizedContainerService.HintSize="434,1485" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3a3c545f-2573-48e3-ac34-f7cf949efdd1" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Route Detail - Lyft" sap:VirtualizedContainerService.HintSize="649,2195" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3a3c545f-2573-48e3-ac34-f7cf949efdd1" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1229" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Get Ride Data" sap:VirtualizedContainerService.HintSize="615,1939" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="distanceAndDuration" />
               <Variable x:TypeArguments="x:String" Name="dropOff" />
               <Variable x:TypeArguments="x:String" Name="pickUp" />
               <Variable x:TypeArguments="x:String" Name="requested" />
               <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dt_RideData" />
+              <Variable x:TypeArguments="x:Int32" Name="int_RideEarnings" />
+              <Variable x:TypeArguments="x:Int32" Name="int_Bonuses" />
+              <Variable x:TypeArguments="x:Int32" Name="int_Tips" />
+              <Variable x:TypeArguments="x:Int32" Name="int_Tolls" />
+              <Variable x:TypeArguments="x:Int32" Name="int_Cancellation" />
+              <Variable x:TypeArguments="x:Int32" Name="int_Total" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetText DisplayName="Get Text 'Distance and Duration'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_1" Version="V1">
+            <uix:NGetText DisplayName="Get Text 'Distance and Duration'" sap:VirtualizedContainerService.HintSize="573,156" sap2010:WorkflowViewState.IdRef="NGetText_1" Version="V1">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/6135988a82c32f000fc1f5af" ContentHash="GutOIxDFRkqylRmZjE53MA" DesignTimeRectangle="376, 490, 112, 20" ElementType="Text" FriendlyName="'9.02 miles • 14m 15s'" FullSelectorArgument="&lt;webctrl aaname=' 9.02 miles • 14m 15s ' parentid='main-wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' * ' parentid='main-wrapper' tag='DIV' type='' /&gt;" Guid="234deebd-7b02-45cb-9357-30d8fdda122f" ImageBase64="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" InformativeScreenshot="09d22f63c73a8a1e8c5c871b87f1eac2.png" Reference="X4tath9j9kWzSCg9KCZkzw/KMkV6H6YBkePkZDtuwhAPg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -116,12 +124,12 @@
                 <OutArgument x:TypeArguments="x:String">[distanceAndDuration]</OutArgument>
               </uix:NGetText.Text>
             </uix:NGetText>
-            <uix:NClick ClickType="Single" DisplayName="Click 'View earnings breakdown'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V1">
+            <uix:NClick ClickType="Single" DisplayName="Click 'View earnings breakdown'" sap:VirtualizedContainerService.HintSize="573,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/6135988a82c32f000fc1f5af" ContentHash="ozdVBjQRpESlJk1d_OKkYA" DesignTimeRectangle="376, 642, 152, 16" ElementType="Text" FriendlyName="'View earnings breakdown'" FullSelectorArgument="&lt;webctrl aaname=' View earnings breakdown ' parentid='main-wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' View earnings breakdown ' parentid='main-wrapper' tag='A' type='' check:text='View earnings breakdown' /&gt;" Guid="7eca8fea-d949-4616-b9fd-07d995ce078a" ImageBase64="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" InformativeScreenshot="d9c8183f56e5eb36ff76d8675e85cebc.png" Reference="X4tath9j9kWzSCg9KCZkzw/etGVTYJIlES3PX_Ku6q4ag" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NGetText DisplayName="Get Text 'Requested Time'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_4" Version="V1">
+            <uix:NGetText DisplayName="Get Text 'Requested Time'" sap:VirtualizedContainerService.HintSize="573,156" sap2010:WorkflowViewState.IdRef="NGetText_4" Version="V1">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/6135988a82c32f000fc1f5af/breakdown" ContentHash="mdtNOWRcmUGDYV8FJFEzxg" DesignTimeRectangle="397, 662, 650, 20" ElementType="Text" FriendlyName="'Requested at 12:23 AM'" FullSelectorArgument="&lt;webctrl aaname=' Requested at 12:23 AM ' parentid='main-wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Requested at * ' parentid='main-wrapper' tag='DIV' type='' check:text='Requested at *' /&gt;" Guid="c2902308-57d3-4302-bacf-4607d7fa9cb9" ImageBase64="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" InformativeScreenshot="00b886b01a783bdcf8f0439605fa293d.png" Reference="X4tath9j9kWzSCg9KCZkzw/EkN-2KJK4EuDNKPybPR_hg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" />
               </uix:NGetText.Target>
@@ -129,7 +137,7 @@
                 <OutArgument x:TypeArguments="x:String">[requested]</OutArgument>
               </uix:NGetText.Text>
             </uix:NGetText>
-            <uix:NGetText DisplayName="Get Text 'Pickup Time'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_3" Version="V1">
+            <uix:NGetText DisplayName="Get Text 'Pickup Time'" sap:VirtualizedContainerService.HintSize="573,156" sap2010:WorkflowViewState.IdRef="NGetText_3" Version="V1">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/6135988a82c32f000fc1f5af/breakdown" ContentHash="Xt6SCLNfZ0mgl_uHtLIRAw" DesignTimeRectangle="397, 643, 100, 17" FriendlyName="'12:42 AM Pickup'" FullSelectorArgument="&lt;webctrl tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='STRONG' type='' aaname=' * Pickup ' check:text='* Pickup' /&gt;" Guid="265ee0a6-7488-4095-8b5e-53a51ec137db" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAVCAYAAACqoKu+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUMSURBVGhD7VjNa1pZFJ//KSsXga7spm5GC6GBkRQEyULsQhpIKCSb0YF8DDUuSgpCQJAJGISQQIhQeFAwMCIUK10IQkQISREfBB4IvznnfrwvX6LODB1h/MEB79e5957fPb97nz9hgbnGgqA5x4KgOceCoDnHgqA5x4KgOUcwQSML1kj9ZlB5ODCFeeongceZlioozOLr1sDxUR6HR1W0fW5gNlCmtmOjryq86NR43AmapqrwoIsr4ddtJRhd1fmhgY9v4kgWG/BP68fdWRpLy8+x31QV/zK8BA1aOC+kEQ67JuxXkXnxXCxC2It1HH8N3LUXoz5ONyJYylRxp6pm9dWrJFTfCHLXvlB9ySPEbeEs6v4oDmrYpD0sLcdR7qo6DxrY12vwWASpCyK8U0SMyy8/oK1GPIYfRlDzOCo3rExO+B3n76gcjmOnUoNR2ZELXy2iI0Y9BgvNoxXpyyZoVl8tfHxJ7ckE1rjfdg1D1cIY1rbstabOvFnkEEv7+FNVeqAJykPH1eqeIMV1ihSr30VvUvoQfhxBxQQ2SxS40rprwj6V88hVGqIPl08zro31WYKK8KuM1czL4LPZBE3w5cfXD4jQ+LVKC8Yu93uL84FqI/Sqcp3COKhaLi0DOZE90vzkSYwT5KyH5rlXEkhrtQ+F2aVDpeSwdIG2SnwPQSIe1F4kSTZNNEX/GnqyK3BTE+PLSnd7n7idZLjTwCnFRrRde9c7dgc9dSLswCdPxKTNggxC6EgHnXBbRYoCFNtI4xX3dUucC35fXlioH5A8Lqdxekul66zIbnew5dwRbP66Jdoyl99FvVw/SeJBdnxtNiZlkGrXa/dLM1t4C1f3rngZNGaV21YodkxAwAGkPXNfvQ8dP7/FCs7dNz1BtEgOPC/g8Isafl+ni7qEOi1UQN87q7RJ7s8TBhEU5MsNnQV6rC7bZJJcbvB4IrBPUsiB4TlHWhZL6NycIMnz7xoBF70myG/qDvIQZOJqm9tWkFNSYXXrML7JLNDxCoX5QNF4+xBNT1DsoIY7VoBBXZGcQPlGdJmSIHrVyIHuBfhBKV3geyeKzYqB+uWezKDEHs6vG46eT+HLfb94TV/6XZQTXN5DnTY2vHxLv8nfuzRlE2XPZwqeSQ8FHhOYwZogknWWJGGuV5yHIPU7QaSrVjd0vIT9UnSkdmqC1umQiaKAlm4d/8kE6azgAFTHn0SWCrxFryr73hkzKVWTfEmoxwSd2Mx7HTyy39aFlEWKLfJDJ4396leWzhyuE5nElZoE9z2j8VQbw02QOgz0WjQeVDP7V0ToeKVI0nl9jjxpgpy70zJ2ZF8PQVF6yOiDYaL+Pkp1EVIWWTOBIJ0V7CiCWCKOV8J2hP4y23xihSxY8tvGtm8lKTGpEtrim+dpXzb4DuM+/pM/oqCxzIUpqAHyKbPIuYtEgFI8V5oufVVlYxaCKCYXMvihn9PI0WHJvYkg9Jqyl+LqxEvvz1GGNr2MuU2M25WfL1z2EkQWjiK1m8f+dlzM4xyyiQTpjfhNZoSHID/GAv20Lw39RA6Sv2ZBZl/uj9/lRui0Pg59dwR9C81GEPvqnGWxph8KHNBSS2SKJ162QtB99ZkOCsn54Wsu85g4DgtBGRTHJqnDM+5D9iyZxZVr62MEzQotcf8XWP5/RqaARU/uoH9NJEFa/i0MtYS68I8JWuDvw0PQI1gQ9B9iQdC842Hyn8YLguYawF8o17BmMgbU2AAAAABJRU5ErkJggg==" InformativeScreenshot="f4ca4b654cf9f54edd89229b53670231.png" Reference="X4tath9j9kWzSCg9KCZkzw/mZOf6oOtd0us7FMwniDtuA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" />
               </uix:NGetText.Target>
@@ -137,7 +145,7 @@
                 <OutArgument x:TypeArguments="x:String">[pickUp]</OutArgument>
               </uix:NGetText.Text>
             </uix:NGetText>
-            <uix:NGetText DisplayName="Get Text 'Drop-off Time'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_2" Version="V1">
+            <uix:NGetText DisplayName="Get Text 'Drop-off Time'" sap:VirtualizedContainerService.HintSize="573,156" sap2010:WorkflowViewState.IdRef="NGetText_2" Version="V1">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/6135988a82c32f000fc1f5af/breakdown" ContentHash="BRHm1GVckEKoumNVKQ09zQ" DesignTimeRectangle="397, 699, 114, 17" FriendlyName="'12:56 AM Drop-off'" FullSelectorArgument="&lt;webctrl idx='2' tag='STRONG' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='STRONG' aaname=' * Drop-off ' check:text='* Drop-off' /&gt;" Guid="bb318cf4-a514-4dc5-b4a9-c431fe490b83" ImageBase64="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" InformativeScreenshot="4affa5157f75c1a0cde05731a2e5910c.png" Reference="X4tath9j9kWzSCg9KCZkzw/7gUn_s-7JE6HhimKh01jsQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" />
               </uix:NGetText.Target>
@@ -145,11 +153,113 @@
                 <OutArgument x:TypeArguments="x:String">[dropOff]</OutArgument>
               </uix:NGetText.Text>
             </uix:NGetText>
-            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Type'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Amount'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="0" ScopeIdentifier="3a3c545f-2573-48e3-ac34-f7cf949efdd1" Version="V1">
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_RideData]" DisplayName="Extract Ride Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Type'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Amount'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="573,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="0" ScopeIdentifier="3a3c545f-2573-48e3-ac34-f7cf949efdd1" Version="V1">
               <uix:NExtractData.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="328, 149, 768, 1051" FriendlyName="'← Back'" FullSelectorArgument="&lt;webctrl tag='SECTION' /&gt;" Guid="c9e4b1f2-5fc5-4f49-b523-8f3bc5c4592b" InformativeScreenshot="11468bbfc381c70ab4dff53ead6013d4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="Selector" />
               </uix:NExtractData.Target>
             </uix:NExtractData>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_RideData]" DisplayName="For Each Row in dt_RideData" sap:VirtualizedContainerService.HintSize="573,571" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body of dt_RideData" sap:VirtualizedContainerService.HintSize="539,450" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[CurrentRow(0).ToString]" sap:VirtualizedContainerService.HintSize="497,356" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                      <Switch.Default>
+                        <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,287" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                            <TryCatch.Try>
+                              <Throw Exception="[new BusinessRuleException(&quot;Item is not set up&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                            </TryCatch.Try>
+                            <TryCatch.Catches>
+                              <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ActivityAction x:TypeArguments="ui:BusinessRuleException">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
+                                  </ActivityAction.Argument>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[CurrentRow(0).ToString + &quot; has not been set up&quot;]" />
+                                </ActivityAction>
+                              </Catch>
+                            </TryCatch.Catches>
+                            <TryCatch.Finally>
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please set up &quot; + CurrentRow(0).ToString + &quot; to be added to the data table.  The current process will be terminated.&quot;]" />
+                            </TryCatch.Finally>
+                          </TryCatch>
+                          <TerminateWorkflow DisplayName="Terminate Workflow" Exception="[new BusinessRuleException(CurrentRow(0).ToString + &quot; was not found.&quot;)]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="[&quot;Process can not continue until &quot; + CurrentRow(0).ToString + &quot; has been properly setup.&quot;]" />
+                        </Sequence>
+                      </Switch.Default>
+                      <Assign x:Key="&quot;Ride Earnings&quot;" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[int_RideEarnings]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[CInt(CurrentRow(1))]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign x:Key="&quot;Bonuses&quot;" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[int_Bonuses]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[CInt(CurrentRow(1))]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign x:Key="&quot;Tips&quot;" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[int_Tips]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[CInt(CurrentRow(1))]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign x:Key="&quot;Tolls&quot;" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[int_Tolls]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[CInt(CurrentRow(1))]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign x:Key="&quot;Cancel Earnings&quot;" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_6">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[int_Cancellation]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[CInt(CurrentRow(1))]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign x:Key="&quot;Total&quot;" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_7">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[int_Total]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[CInt(CurrentRow(1))]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Switch>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <ui:BuildDataTable DataTable="{x:Null}" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="573,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column1&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Column2&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Column1&gt;text&lt;/Column1&gt;&#xD;&#xA;    &lt;Column2&gt;1&lt;/Column2&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
