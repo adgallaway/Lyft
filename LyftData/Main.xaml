@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,2245" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,2758" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
       <x:String>System.Activities</x:String>
@@ -75,7 +75,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="518,2180" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap:VirtualizedContainerService.HintSize="518,2693" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:UiElement" Name="Edge" />
     </Sequence.Variables>
@@ -84,19 +84,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Lyft Driver Login" sap:VirtualizedContainerService.HintSize="476,1936" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Lyft Driver Login" sap:VirtualizedContainerService.HintSize="476,2601" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Lyft: A ride whenever you need one" sap:VirtualizedContainerService.HintSize="434,1844" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OutUiElement="[Edge]" ScopeGuid="bf2c4efa-e3f0-488d-885d-b6bb9616a73a" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Lyft: A ride whenever you need one" sap:VirtualizedContainerService.HintSize="434,2509" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OutUiElement="[Edge]" ScopeGuid="bf2c4efa-e3f0-488d-885d-b6bb9616a73a" Version="V1" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1628" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,2293" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="str_Verification" />
               </Sequence.Variables>
@@ -146,6 +146,22 @@
                   <uix:TargetAnchorable BrowserURL="https://www.lyft.com/drive/year" ContentHash="EITmemQIqUiK8ngaGHrDeA" DesignTimeRectangle="360, 552, 39, 19" ElementType="Text" FriendlyName="'« 2021'" FullSelectorArgument="&lt;webctrl aaname='« 2021' parentid='main-wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='« 2021' parentid='main-wrapper' tag='A' type='' check:text='« 2021' /&gt;" Guid="9b54fa21-1a0e-45e2-82df-006ded240cdd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAXCAYAAACS5bYWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJjSURBVFhH7VQxa9tQEO6ef5G5Y4aMHjN069Ctg4duGTp26FDwkMGDwQaDiwklFGNqEkgJoYEGGhC04OAhQ0mJwSYUEz3JT0S2hL18/Z5sS5Ys221qDaUePizf3Xv33b3v7tFgOMS/gjXZpLAmmxT+D7JOqwGzUIORraF70kQv4u9da+jSp/xmpQHbCfudzg/I/fl+VzQhtWbI9iCyfa0KsfOOJOuQnzWYr4vQ02ewx377sAzd99dJugQ9VYN1P/K7N2cQWyUYh2N/oQyRqsKS9HWuYGYYv5GFnmmE8j6A7B26uyTSidheZGF8U99Mtl2O+IewsjmI/VGnrEIR5mWM/8Md7JOP6GptOBfVVZCNh5UhWY3fl0fQd7/MyGJwfQqRPve7H4VdKUFUfgY2vt5Ssv1P7yEY1Jd1GE9HTxONmYXqZglmi1o9pgRy32dj7r/C2KQUonYP45dRxU5sS8lKXrijtCUh3xR5WIaC4yHZ1TzE3hUc/p/pkI8GjA0WP2MfndGjXV9MlgRf5ak7G33qxevuVOA8jBJNDdcfkvWGdTxc0/bFZNUzpY54mQNrj6Qv7FBgHOISuTGD4eH2HOJZUJSCtxUeUz43U3ETLJOBp1fqzfX0GqyaOMxN1KJ9WxUdtju8WyV3JzbJTqfYlHlSW0Z2IgW1VhZKYWEitdqyEAdNT8PK5goWz/hgXbVhphlTaQfko1hOlpCc7Ld1PhcH5+AUVmRfDoYG5EsubLW0I/C1qu54noO+xcF7wt9NFnYcELMK+djzIXK/RXaFcLlVekL6Hf5bJEp21ViTTQprsslgiF8eIqpl0UVNDQAAAABJRU5ErkJggg==" InformativeScreenshot="1ee16f133b99d646644e06e897c37e64.png" Reference="X4tath9j9kWzSCg9KCZkzw/UnjgmEqgeUSQyid-SMMnAw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" />
                 </uix:NClick.Target>
               </uix:NClick>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke WeeklyURLscrape workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WeeklyURLscrape.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Aaron Gallaway'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/61342eee5bb3c2001012dbef/breakdown" ContentHash="6_IHju4rok2k5faKh8cLJg" DesignTimeRectangle="1719, 103, 128, 19" ElementType="Text" FriendlyName="'Aaron Gallaway'" FullSelectorArgument="&lt;webctrl aaname='         Aaron Gallaway     ' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='         Aaron Gallaway     ' tag='SPAN' type='' check:text='Aaron Gallaway' /&gt;" Guid="c719f16e-6bdc-4de4-ad62-1cf69ad9ae67" ImageBase64="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" InformativeScreenshot="c114a57fd91235c081fdd451bef7fbcc.png" Reference="X4tath9j9kWzSCg9KCZkzw/rSFIdevgNU-B_KWaxA5Agw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Log Out'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/61342eee5bb3c2001012dbef/breakdown" ContentHash="uFu9rfy5iUi9Ek6lhnwXcA" DesignTimeRectangle="1746, 243, 83, 19" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl aaname='           Log Out         ' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='           Log Out         ' tag='A' type='' check:text='Log Out' /&gt;" Guid="34d91526-7476-4e10-ae57-5ed6a0a65382" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAXCAYAAAB+kNMAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQuSURBVGhD7ZjbSyRHFMb9W3zxQUR8EETwQfBN8UEEFUXwwYgRg1EGiYgyBlnRjBoWRUQJ4nVN4mrWkOjqiMGgZDHJGte4JjEq3tYb3nAVL1/8aqtnpsfqnhl2xhUyP2i669Sp6q6vTp+u6hAECRhBcQNIUNwAEhQ3gATFDSBBcW+5vr7GwcEBTk5OpMU/eCXuR59Y5FXg6OrqEsd9sr+/j+rqaoSGhiIuLg4xMTGIiIhAT08Pzs/PpZd3HB8fY25uDldXV9LyPxZ3fX0dKSkpaG9vx9nZmbQCOzs7KC0tRUFBAU5PT6XVM4uLi7BYLLq+dOJytqyPbLLkRCUu/XydXTPuU1wKUFhYiO7ubtzc3Eirk8vLS9TU1KC2tlYXiWZ4FLf7ybd4MvCdLDlRiUs/+vsLM3EpAB++qakJdXV1mJiYuDOxjLL+/n4hSm9vL/b29rCysiIOd6amplBUVGQaHJubm8jIyMDy8jJ2d3exsLAga5zQxjreg8+emZmJkZERxz0d4h4dHePjTz/D2du30uJEJS796M92/sBIXEYRIygrKwvDw8MYGxuD1WpFeno6tre3hQ+FT0hIQH19vRC+r68PycnJKC4uVvZJv46ODllSwwmtrKzE6OiomIyqqipZ44Q21nkUd/qXWbR+pY4co5xLf7bzB0biUkz3/MeB85WuqKi4ndwj5ObmYnx8XNa+Y2trC4mJico+NVE8QT+29yQuMU0LT5/9gO9H9A+oYSQu/dnOHxiJywEwetzhh4eizszMCPH5tXanpaVF2ScjV2V3xZfIJabi9t/m0Of2n2RJj5G49Gc7f2AmrirKmFOzs7Nht9vvDErDqE/250vOfW9xKVTfN4OypGfmhfrVp7/RhPiKkRBtbW3icGd+fh55eXlYWlpCTk6OWFq5wlxdVlam7JMC+LJamJ6eRklJCS4uLqTHuz54f6/E/effVeUyzAz6s50/MBJXW49yEJoQzKeM2sHBQWFrbGxEfn6+IzVwx8WVQ3h4uLJPwn7T0tLQ2dmpE4Q5nBHpmucZxUlJSSKv837snx/XsLAw78Qlj2yP8eLX32XJHPrR319QhJCQEN0RGRkpHnptbU2IGRUVhfj4eMTGxjoGShhpzK8cLOu5y2JebW1tNRSXaDs0rR13abyHaofG6I2Ojnbs4pqbm1FeXu69uK/+fI2SMiu2tt9IixrW04/+9wkf/PDwUPkqE4rMfwQ8Ewo8NDQkrs3w9t+C5ueaHszQiUvskz/DUv45fns5Ly16aGc9/R4Kq6urIrpdYerg2pgR9aG4Iy55+ccrVNXUo7ruS3z99Bm+eNwizizTzvqHxOTkpNhEDAwMYGNjQ6yNuYmw2Wxeb18DgVJcjdd//Y0fn0+Ia55ZfqgwehsaGpCamirWp7Ozs+I1/pCYihvk/QiKGzCA/wCW9rBqmEcp7wAAAABJRU5ErkJggg==" InformativeScreenshot="b6cf3465535855d1e2617364fc669001.png" Reference="X4tath9j9kWzSCg9KCZkzw/_wBdoRfjZE-cAvBx_DoFhA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V1" />
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>
@@ -154,10 +170,5 @@
         </uix:NApplicationCard.TargetApp>
       </uix:NApplicationCard>
     </Sequence>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke WeeklyURLscrape workflow" sap:VirtualizedContainerService.HintSize="476,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WeeklyURLscrape.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>

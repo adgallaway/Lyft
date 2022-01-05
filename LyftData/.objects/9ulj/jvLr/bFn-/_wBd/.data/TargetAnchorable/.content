@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/61342eee5bb3c2001012dbef/breakdown" ContentHash="uFu9rfy5iUi9Ek6lhnwXcA" DesignTimeRectangle="1746, 243, 83, 19" ElementType="Text" FriendlyName="'Log Out'" FullSelectorArgument="&lt;webctrl aaname='           Log Out         ' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='           Log Out         ' tag='A' type='' check:text='Log Out' /&gt;" Guid="34d91526-7476-4e10-ae57-5ed6a0a65382" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">07rY3Ia_oaUmtX4ftvMhBVQ</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="b6cf3465535855d1e2617364fc669001.png" xmlns="">09GPEsnTJBUmZT98HoFpd3A</imageRef>
+</TargetAnchorable>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/detail/route/61342eee5bb3c2001012dbef/breakdown" ContentHash="6_IHju4rok2k5faKh8cLJg" DesignTimeRectangle="1719, 103, 128, 19" ElementType="Text" FriendlyName="'Aaron Gallaway'" FullSelectorArgument="&lt;webctrl aaname='         Aaron Gallaway     ' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='         Aaron Gallaway     ' tag='SPAN' type='' check:text='Aaron Gallaway' /&gt;" Guid="c719f16e-6bdc-4de4-ad62-1cf69ad9ae67" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Route Detail - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0amreVMMHykOF2jNCrhQrjg</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="c114a57fd91235c081fdd451bef7fbcc.png" xmlns="">0eALKkn4AqEinNbvoiz3DsA</imageRef>
+</TargetAnchorable>
