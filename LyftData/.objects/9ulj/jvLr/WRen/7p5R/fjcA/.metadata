@@ -1,0 +1,14 @@
+﻿{
+  "Id": "fjcAgbubJUyIQWp_JdkY7Q",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/fjcAgbubJUyIQWp_JdkY7Q",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/7p5Rl4E7w0STk1Q-oLeJQA",
+  "Name": "Next link Button",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2022-01-05T16:26:08.9570376Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-01-05T16:26:08.9570376Z"
+}

@@ -1,14 +1,14 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="DailyData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="arg_WeekOf" Type="InArgument(x:String)" />
+    <x:Property Name="arg_WeekOf" Type="InOutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>897.333333333333,2964</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,4094</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DailyData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="41">
+    <scg:List x:TypeArguments="x:String" Capacity="84">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -50,10 +50,13 @@
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -82,9 +85,16 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DailyData" sap:VirtualizedContainerService.HintSize="703.333333333333,2899.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DailyData" sap:VirtualizedContainerService.HintSize="812,4029" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_DayOfWeek" />
       <Variable x:TypeArguments="x:String" Name="str_Month" />
@@ -96,24 +106,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Lyft - Daily" sap:VirtualizedContainerService.HintSize="661.333333333333,2807.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3db9e9e6-705e-4521-8ca3-ec1a91bf3ea6" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Lyft - Daily" sap:VirtualizedContainerService.HintSize="770,3937" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3db9e9e6-705e-4521-8ca3-ec1a91bf3ea6" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Get Daily Data" sap:VirtualizedContainerService.HintSize="627.333333333333,2589.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Get Daily Data" sap:VirtualizedContainerService.HintSize="736,3681" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="bonusExists" />
               <Variable x:TypeArguments="s:String[]" Name="arrayDay" />
               <Variable x:TypeArguments="sd:DataTable" Name="dt_RideURLs" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dt_CancelType" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetText DisplayName="Get Text 'Day'" sap:VirtualizedContainerService.HintSize="585.333333333333,158" sap2010:WorkflowViewState.IdRef="NGetText_1" Version="V1">
+            <uix:NGetText DisplayName="Get Text 'Day'" sap:VirtualizedContainerService.HintSize="694,156" sap2010:WorkflowViewState.IdRef="NGetText_1" Version="V1">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.lyft.com/drive/day/2021-09-12" ContentHash="co-MY7qZcEGXHAr3sxCYNw" DesignTimeRectangle="438, 349, 1056, 56" FriendlyName="'Sun, Sep 12, 2021'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' aaname='*' /&gt;" Guid="565f9f95-b037-4576-932e-537bd1cf8cca" ImageBase64="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" InformativeScreenshot="e7f466d7abf3081c7454b0c155348b4d.png" Reference="X4tath9j9kWzSCg9KCZkzw/E9U9BVitEEqANfcUQbAgow" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="FuzzySelector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -127,7 +138,7 @@
                 <OutArgument x:TypeArguments="x:String">[str_DayOfWeek]</OutArgument>
               </uix:NGetText.Text>
             </uix:NGetText>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="585.333333333333,191.333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="694,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
@@ -165,7 +176,7 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <ui:UiElementExists DisplayName="Bonus History Exists" Exists="[bonusExists]" sap:VirtualizedContainerService.HintSize="585.333333333333,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists DisplayName="Bonus History Exists" Exists="[bonusExists]" sap:VirtualizedContainerService.HintSize="694,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f673d79c-6cca-4c00-b71b-42ec8ab35b43" InformativeScreenshot="d9c95444a726b924a2a2809c575a55bb" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;lyft-driver-day&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;h2' tag='H2' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -177,9 +188,9 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[bonusExists = True]" sap:VirtualizedContainerService.HintSize="585.333333333333,1225.33333333333" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[bonusExists = True]" sap:VirtualizedContainerService.HintSize="694,1365" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence DisplayName="Get Bonus" sap:VirtualizedContainerService.HintSize="548.666666666667,1031.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Get Bonus" sap:VirtualizedContainerService.HintSize="549,1177" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="dt_BonusData" />
                     <Variable x:TypeArguments="sd:DataTable" Name="dt_Bonus" />
@@ -189,18 +200,18 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_BonusData]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Time'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='BonusAmt'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="506.666666666667,158.666666666667" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="0" ScopeIdentifier="3db9e9e6-705e-4521-8ca3-ec1a91bf3ea6" Version="V1">
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_BonusData]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Time'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='BonusAmt'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="507,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="3db9e9e6-705e-4521-8ca3-ec1a91bf3ea6" Version="V1">
                     <uix:NExtractData.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="462, 419, 1008, 887" FriendlyName="'11:39 PM'" FullSelectorArgument="&lt;webctrl tag='OL' /&gt;" Guid="19f2e969-fa7c-4519-8cb4-931aac89408e" InformativeScreenshot="52fb7db6de5010f291eaed8864abf293.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="Selector" />
+                      <uix:TargetAnchorable ContentHash="Smfcz3A7y0iHv_CAXmA0_A" DesignTimeRectangle="462, 419, 1008, 887" FriendlyName="'Extract Bonus Data'" FullSelectorArgument="&lt;webctrl tag='OL' /&gt;" Guid="19f2e969-fa7c-4519-8cb4-931aac89408e" InformativeScreenshot="52fb7db6de5010f291eaed8864abf293.png" Reference="X4tath9j9kWzSCg9KCZkzw/D29QlREkJESmTvAuYiNqQQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="Selector" />
                     </uix:NExtractData.Target>
                   </uix:NExtractData>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_BonusData]" DisplayName="For Each Row in dt_BonusData" sap:VirtualizedContainerService.HintSize="506.666666666667,738" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_BonusData]" DisplayName="For Each Row in dt_BonusData" sap:VirtualizedContainerService.HintSize="507,887" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body of dt_Bonus" sap:VirtualizedContainerService.HintSize="472.666666666667,614.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence DisplayName="Body of dt_Bonus" sap:VirtualizedContainerService.HintSize="473,766" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="s:String[]" Name="arrayBonus" />
                             <Variable x:TypeArguments="x:String" Name="bonusTime" />
@@ -213,7 +224,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.666666666667,191.333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                             <ui:MultipleAssign.AssignOperations>
                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -251,8 +262,9 @@
                               </scg:List>
                             </ui:MultipleAssign.AssignOperations>
                           </ui:MultipleAssign>
-                          <ui:BuildDataTable DataTable="{x:Null}" DisplayName="Build Data Table for Bonus" sap:VirtualizedContainerService.HintSize="430.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Week_x0020_Of&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Year&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Day_x0020_Of_x0020_Week&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Time&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Amount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{arg_WeekOf, bonusType, str_Year, str_Date, str_DayOfWeek, bonusTime, bonusAmt}]" DataTable="[dt_Bonus]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="430.666666666667,190" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                          <ui:BuildDataTable DataTable="{x:Null}" DisplayName="Build Data Table for Bonus" sap:VirtualizedContainerService.HintSize="431,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Week_x0020_Of&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Year&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Day_x0020_Of_x0020_Week&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Time&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Amount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{arg_WeekOf, bonusType, str_Year, str_Date, str_DayOfWeek, bonusTime, bonusAmt}]" DataTable="[dt_Bonus]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="431,185" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                          <ui:AppendRange DataTable="[dt_Bonus]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="431,115" sap2010:WorkflowViewState.IdRef="AppendRange_2" SheetName="Bonus" WorkbookPath="Lyft Test.xls" />
                         </Sequence>
                       </ActivityAction>
                     </ui:ForEachRow.Body>
@@ -269,35 +281,98 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_RideURLs]" DisplayName="Get Ride URLs" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='RideURL'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='a' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="585.333333333333,158.666666666667" sap2010:WorkflowViewState.IdRef="NExtractData_2" MaximumResults="0" ScopeIdentifier="3db9e9e6-705e-4521-8ca3-ec1a91bf3ea6" Version="V1">
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_RideURLs]" DisplayName="Get Ride URLs" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Url'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='New column 2'&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='a' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='a' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='a' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="694,156" sap2010:WorkflowViewState.IdRef="NExtractData_2" MaximumResults="0" ScopeIdentifier="3db9e9e6-705e-4521-8ca3-ec1a91bf3ea6" Version="V1">
               <uix:NExtractData.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="462, 290, 1008, 3766" FriendlyName="'12:46 AM'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;lyft-driver-day&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;ol' tag='OL' /&gt;" Guid="842e4dc5-7930-4674-b9a0-6aee74c9cae1" InformativeScreenshot="d51f7532408332ddc967d729c07ac0d9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="Selector" />
+                <uix:TargetAnchorable ContentHash="d0SXR0dnbEeX3EedYlk6rQ" DesignTimeRectangle="376, 281, 672, 1993" FriendlyName="'Get Ride URLs'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;lyft-driver-day&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;ol' tag='OL' /&gt;" Guid="8b2cb04b-1aa7-473e-8ff3-9af2d5b1f521" InformativeScreenshot="01049f47e4f0197ccf16f8683db3c783.png" Reference="X4tath9j9kWzSCg9KCZkzw/3us9XrIDwEOkxZbvDFJ4hw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="Selector" />
               </uix:NExtractData.Target>
             </uix:NExtractData>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_RideURLs]" DisplayName="For Each Row in dt_RideURLs" sap:VirtualizedContainerService.HintSize="585.333333333333,455.333333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_RideURLs]" DisplayName="For Each Row in dt_RideURLs" sap:VirtualizedContainerService.HintSize="694,1411" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,332" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Body of for each in dt_RideURLs" sap:VirtualizedContainerService.HintSize="660,1290" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="weekOf">
-                        <Variable.Default>
-                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="arg_WeekOf" />
-                        </Variable.Default>
-                      </Variable>
+                      <Variable x:TypeArguments="x:String" Default="[arg_WeekOf]" Name="weekOf" />
+                      <Variable x:TypeArguments="x:String" Name="str_Type" />
+                      <Variable x:TypeArguments="x:String" Name="str_Time" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NGoToUrl DisplayName="Go To URL Ride Data" sap:VirtualizedContainerService.HintSize="334,83.3333333333333" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[CurrentRow(1).ToString]" Version="V1" />
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="RideData.xaml">
+                    <If Condition="[CurrentRow(2).ToString = &quot;Lyft&quot;]" DisplayName="If passenger was a no-show or cancelled" sap:VirtualizedContainerService.HintSize="618,924" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If.Else>
+                        <Sequence DisplayName="If cancelled or no-show is True" sap:VirtualizedContainerService.HintSize="473,765" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="s:String[]" Name="array_Time" />
+                            <Variable x:TypeArguments="s:String[]" Name="array_CancelType" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                            <ui:MultipleAssign.AssignOperations>
+                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[str_Type]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[CurrentRow(2).ToString.Replace("Passenger ", "")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="s:String[]">[array_Time]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="s:String[]">[Split(CurrentRow(0).ToString, " ")]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[str_Time]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[array_Time(0) + " " + array_Time(1)]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="s:String[]">[array_CancelType]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="s:String[]">[{weekOf, str_Year, str_Date, str_DayOfWeek, str_Time, str_Type}]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                              </scg:List>
+                            </ui:MultipleAssign.AssignOperations>
+                          </ui:MultipleAssign>
+                          <ui:BuildDataTable DataTable="[dt_CancelType]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="431,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Week_x0020_Of&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Year&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Day_x0020_of_x0020_Week&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Time_x0020_Requested&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Type&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[array_CancelType]" DataTable="[dt_CancelType]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="431,185" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                          <ui:AppendRange DataTable="[dt_CancelType]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="431,115" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Cancelled" WorkbookPath="Lyft Test.xls" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <uix:NGoToUrl DisplayName="Go To URL Ride Data" sap:VirtualizedContainerService.HintSize="618,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[CurrentRow(1).ToString]" Version="V1" />
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="618,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="RideData.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="arg_WeekOf">
                           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="weekOf" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="arg_Year">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_Year" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="arg_Date">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_Date" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="arg_DayOfWeek">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_DayOfWeek" />
                         </InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>

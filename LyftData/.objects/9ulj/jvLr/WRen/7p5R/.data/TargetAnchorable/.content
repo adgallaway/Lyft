@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/year" ContentHash="nXTmmjApXECjNq8ab0R1OQ" DesignTimeRectangle="462, 349, 1008, 1260" FriendlyName="'Dec 13'" FullSelectorArgument="&lt;webctrl tag='OL' /&gt;" Guid="d9959ad7-2e8e-4e37-afdd-e5ced7fd1a6d" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="InformativeScreenshot" originalValue="70b76354a241e6165a029ca371b03fbd.png" xmlns="">0iKUhitidfU6vK3jcc7RCBA</imageRef>
+</TargetAnchorable>

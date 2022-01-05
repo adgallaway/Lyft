@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.lyft.com/drive/year" ContentHash="CR1AFurB5kW4_R46b80Opg" DesignTimeRectangle="438, 818, 64, 29" ElementType="Text" FriendlyName="'« 2020'" FullSelectorArgument="&lt;webctrl aaname='« 2020' parentid='main-wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='« *' parentid='main-wrapper' tag='A' type='' check:text='« *' /&gt;" Guid="640d77ab-3e83-4cb1-bf6a-e7cc2aa05fa0" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0KYS5NP11QUyKlilpW6pfvQ</imageRef>
+</TargetAnchorable>

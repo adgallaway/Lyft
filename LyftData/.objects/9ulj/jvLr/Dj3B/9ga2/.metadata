@@ -1,0 +1,14 @@
+﻿{
+  "Id": "9ga2f2ubF0aSQP1GpKtOsg",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/9ga2f2ubF0aSQP1GpKtOsg",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/Dj3BrwYPs0GCg7ylIEb2ag",
+  "Name": "Extract Payout Data",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2022-01-05T16:20:32.9824198Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-01-05T16:20:32.9824198Z"
+}

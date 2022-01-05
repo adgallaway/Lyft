@@ -1,0 +1,14 @@
+﻿{
+  "Id": "3us9XrIDwEOkxZbvDFJ4hw",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/3us9XrIDwEOkxZbvDFJ4hw",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/metgUad8U0KPOqWubBiE2Q",
+  "Name": "Get Ride URLs",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2022-01-05T16:18:30.968881Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-01-05T16:18:30.968881Z"
+}

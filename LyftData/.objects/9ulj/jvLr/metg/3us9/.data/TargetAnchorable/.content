@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="d0SXR0dnbEeX3EedYlk6rQ" DesignTimeRectangle="376, 281, 672, 1993" FriendlyName="'11:21 PM'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;lyft-driver-day&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;ol' tag='OL' /&gt;" Guid="8b2cb04b-1aa7-473e-8ff3-9af2d5b1f521" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="InformativeScreenshot" originalValue="01049f47e4f0197ccf16f8683db3c783.png" xmlns="">0LMZtMENocUeHn0z7GElnJQ</imageRef>
+</TargetAnchorable>

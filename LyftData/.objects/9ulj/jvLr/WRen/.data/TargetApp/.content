@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="A9AGRq7-pEqZX7AujRA5Mw" Selector="&lt;html app='msedge.exe' title='Driving History - Lyft'/&gt;" Url="https://www.lyft.com/drive/year" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">03lLG3ZrlBUe3GOp7t_goWw</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="e02b92cfa3cba2a265ca7927c72a45ea.png" xmlns="">0t-2644ZJkEGg4crTCVhthg</imageRef>
+</TargetApp>

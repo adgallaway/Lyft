@@ -1,0 +1,14 @@
+﻿{
+  "Id": "7p5Rl4E7w0STk1Q-oLeJQA",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/7p5Rl4E7w0STk1Q-oLeJQA",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/WRenlRRFzkiramlmCEYApA",
+  "Name": "Extract Weekly URLs",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2022-01-05T16:26:08.8173007Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-01-05T16:26:08.8173007Z"
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Id": "WRenlRRFzkiramlmCEYApA",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/WRenlRRFzkiramlmCEYApA",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/jvLrfjknOU-xoHeP8xGBtg",
+  "Name": "Edge: Lyft - Weekly URLs",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Created": "2022-01-05T16:25:55.2627356Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-01-05T16:25:55.2627356Z"
+}

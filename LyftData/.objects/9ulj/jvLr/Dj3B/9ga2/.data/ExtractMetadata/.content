@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ExtractMetadataObjectReference ContentHash="k7BGAfmeN0SzhNTUrb6Q2A" Value="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Column-0' attr='text' /&gt;&lt;column name='Column-1' attr='text' /&gt;&lt;/extract-table&gt;" xmlns="clr-namespace:UiPath.UIAutomationNext.Activities.Design.ViewModels;assembly=UiPath.UIAutomationNext.Activities.Design" />
