@@ -1,0 +1,14 @@
+﻿{
+  "Id": "UsrlPe_UZkS8aOCJPIslMQ",
+  "Reference": "X4tath9j9kWzSCg9KCZkzw/UsrlPe_UZkS8aOCJPIslMQ",
+  "ParentRef": "X4tath9j9kWzSCg9KCZkzw/Dj3BrwYPs0GCg7ylIEb2ag",
+  "Name": "Extract daily URLs",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2022-01-13T17:11:47.3059685Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=21.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-01-13T17:11:47.3059685Z"
+}

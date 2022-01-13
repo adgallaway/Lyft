@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "u5BFdi9aobAKoFEn3WzE6/oVFJfcoS+qkhodDPn+FCGrD5mhIS7hH3hQtfpRqCLtchmv/0yFDzxXIAgOaVn7uw==",
+  "dgSpecHash": "1geC55qP8mVk6cqF9hgwdeaXhRpKMwnMk3XSWi1u6T+CER4GqIeuG31ruC7/3v1NYDYyFAo35DxJuPAtj/8uYA==",
   "success": true,
   "projectFilePath": "C:\\Users\\aaron\\Documents\\UiPath\\Lyft\\LyftData\\.local\\",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\aaron\\.nuget\\packages\\google.apis.gmail.v1\\1.43.0.1859\\google.apis.gmail.v1.1.43.0.1859.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\google.apis.peopleservice.v1\\1.43.0.1876\\google.apis.peopleservice.v1.1.43.0.1876.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\mailkit\\2.10.0\\mailkit.2.10.0.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\microsoft.activities.extensions.2.0.6.9.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.6\\microsoft.aspnetcore.connections.abstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\3.1.6\\microsoft.aspnetcore.http.connections.client.3.1.6.nupkg.sha512",

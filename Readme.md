@@ -8,7 +8,7 @@ Readme.md
     [X] Get weekly data
     [X] Get weekly payout
     [X] Get daily pay break down
-    [] Get ride data
+    [X] Get ride data
     [] All data should be placed in SQL database
     [] All SQL datatables should be normalized
     

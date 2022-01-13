@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable ContentHash="tardmZ2xQk686mln56sPMg" DesignTimeRectangle="304, -1125, 768, 2083" FriendlyName="'← Back'" FullSelectorArgument="&lt;webctrl tag='SECTION' /&gt;" Guid="feedffa9-1199-4e36-b85c-74215cf83137" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Driving History - Lyft' /&gt;" SearchSteps="Selector" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="InformativeScreenshot" originalValue="f8b8e7618653a1373249cbc99fc23d95.png" xmlns="">0XJlmu-0SQEKUKr5TfcHNyA</imageRef>
+</TargetAnchorable>
