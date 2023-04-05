@@ -12,4 +12,5 @@ Readme.md
     [] All data should be placed in SQL database
     [] All SQL datatables should be normalized
     
-
+## ARCHIVED
+    Due to an update to the Lyft web portal, this project has been depriciated
